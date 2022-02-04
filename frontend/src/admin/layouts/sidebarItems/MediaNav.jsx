@@ -36,7 +36,7 @@ const SideMedia = () => {
           <Link className="nav-link" to="/admin/media/library">
             Library
           </Link>
-          <Link className="nav-link" to="/admin/media/library/add-new">
+          <Link className="nav-link" to="/admin/media/add-new">
             Add New
           </Link>
         </nav>

@@ -46,10 +46,7 @@ const App = () => {
           <Route path="/admin/post/tags" element={<TagsScreen />} />
           {/* media */}
           <Route path="/admin/media/library" element={<LibraryScreen />} />
-          <Route
-            path="/admin/media/library/add-new"
-            element={<AddLibraryScreen />}
-          />
+          <Route path="/admin/media/add-new" element={<AddLibraryScreen />} />
           {/* comments */}
           <Route path="/admin/comments" element={<CommentsScreen />} />
           {/* users */}
