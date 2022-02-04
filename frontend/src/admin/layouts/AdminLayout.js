@@ -5,7 +5,6 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 import "./css/styles.css";
-// import "./js/scripts";
 
 const AdminLayout = () => {
   const [navbarToggle, setNavbarToggle] = useState(false);
