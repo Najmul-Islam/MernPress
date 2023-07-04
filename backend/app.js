@@ -1,10 +1,19 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const connectDB = require("./db/connect");
+require("dotenv").config();
+require("express-async-errors");
+
 const cors = require("cors");
 
+const express = require("express");
 const app = express();
-dotenv.config();
+
+const connectDB = require("./db/connect");
+
+// routers
+const posts = require("./routes/postRoute");
+
+// error handler
+const notFoundMiddleware = require("./middlewares/notFound");
+const errorHandlerMiddleware = require("./middlewares/errorHandler");
 
 // middleware
 app.use(express.json());
@@ -16,11 +25,14 @@ app.use(
 );
 
 // routes
-// app.use("/", posts)
+app.use("/api/v1/posts", posts);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
+
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 5000;
 const start = async () => {

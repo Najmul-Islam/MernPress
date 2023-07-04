@@ -1,9 +1,15 @@
 import React from "react";
+import AddPost from "../../components/post/AddPost";
 
 const AddPostScreen = () => {
   return (
-    <div>
-      <h1>Add New screen</h1>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-8">
+          <AddPost />
+        </div>
+        <div className="col-md-4"></div>
+      </div>
     </div>
   );
 };
