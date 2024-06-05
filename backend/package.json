@@ -1,11 +1,11 @@
 {
-  "name": "wordpress-backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "Najmul Islam",
